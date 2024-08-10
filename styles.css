@@ -1,0 +1,542 @@
+/* Stylesheet for Wunderlust Majorca
+   Created by ChatGPT
+*/
+
+/* CSS Reset by Eric Meyer, v2.0 | 20110126 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background-color: #FFFFFF; /* White */
+    color: #222222; /* Dark Gray */
+    margin: 0;
+    padding: 0;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-family: 'Molle', cursive;
+}
+
+h4, p, q, small, nav, button, form {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #55BCD5, #499BD2); /* Teal gradient */
+    color: #222222; /* Dark Gray for text */
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header #logo img {
+    max-width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin: 0 10px 0 0;
+    color: #222222; /* Dark Gray */
+}
+
+header p {
+    font-size: 1rem;
+    margin: 0;
+    color: #222222; /* Dark Gray */
+}
+
+nav ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: #222222; /* Dark Gray */
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #FFFFFF; /* White */
+    border-radius: 5px;
+}
+
+nav ul li a:hover,
+nav ul li.active a {
+    background-color: #F6D64A; /* Yellow background for active and hover states */
+    color: #000000; /* Black text on active and hover */
+}
+
+
+/* Mobile Menu */
+#menu-toggle {
+    background: #222222; /* Dark Gray */
+    color: #FFFFFF; /* White */
+    text-align: center;
+    padding: 10px;
+}
+
+#menu-toggle label {
+    display: block;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+nav ul {
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    text-align: center;
+    background: #55BCD5; /* Teal */
+}
+
+nav ul li {
+    border-bottom: 1px solid #EAEAEA; /* Light Gray */
+    padding: 20px;
+}
+
+nav ul li a {
+    color: #000000; /* Black */
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    color: #222222; /* Dark Gray */
+}
+
+#toggle:checked + ul {
+    display: flex; /* Show menu when checked */
+}
+
+/* Main Content */
+main {
+    padding: 20px 10px;
+}
+
+/* Introduction Section */
+#intro h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #9B26B0; /* Purple */
+}
+
+#intro p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#img-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+#img-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+/* Plan Your Trip Section */
+#plan {
+    background-color: #F6D64A; /* Yellow background */
+    padding: 30px 0;
+    text-align: center;
+}
+
+#plan h3 {
+    font-size: 1.8rem;
+    color: #222222; /* Dark Gray */
+    margin-bottom: 20px;
+}
+
+#plan div {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#plan section {
+    background-color: #55BCD5; /* Teal */
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+    max-width: 200px;
+    text-align: center;
+}
+
+#plan h4 {
+    font-size: 1.2rem;
+    color: #000000; /* Black */
+    margin-top: 10px;
+}
+
+#plan img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    #plan div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #plan section {
+        max-width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Testimonials Section */
+#testimonials {
+    background: #EAEAEA; /* Light Gray */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#testimonials h3 {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #F6D64A; /* Yellow */
+}
+
+#testimonials div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#testimonials section {
+    text-align: center;
+}
+
+#testimonials img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+#testimonials h4 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+/* About Your Destination Section */
+#about {
+    background-color: #499BD2; /* Blue background */
+    padding: 40px 0;
+    text-align: center;
+}
+
+#about h3 {
+    font-size: 1.8rem;
+    color: #FFFFFF; /* White */
+    margin-bottom: 30px;
+}
+
+#about div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+#about section {
+    flex: 1;
+    max-width: 200px;
+    color: #FFFFFF; /* White */
+}
+
+#about img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+#about h4 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #000000; /* Black */
+}
+
+#about p {
+    font-size: 1rem;
+    margin: 0;
+    color: #FFFFFF; /* White */
+}
+
+@media (max-width: 768px) {
+    #about div {
+        flex-direction: column;
+    }
+
+    #about section {
+        margin-bottom: 20px;
+    }
+}
+
+/* Contact Us Section */
+#contact {
+    padding: 40px 0;
+    text-align: left;
+}
+
+#contact h3 {
+    font-size: 1.8rem;
+    color: #222222; /* Dark Gray */
+    margin-bottom: 10px;
+}
+
+#contact .form-required {
+    font-style: italic;
+    color: #666666; /* Gray */
+    margin-left: 5px;
+}
+
+#contact form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 40px;
+}
+
+#contact label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #222222; /* Dark Gray */
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #9B26B0; /* Purple border */
+    border-radius: 5px;
+    color: #222222; /* Dark Gray */
+}
+
+#contact fieldset {
+    grid-column: span 2;
+    border: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#contact fieldset legend {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #222222; /* Dark Gray */
+}
+
+#contact .radio-input {
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+}
+
+#contact .radio-input input[type="radio"] {
+    display: none;
+}
+
+#contact .radio-input .radio-control {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #9B26B0; /* Purple border */
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#contact .radio-input input[type="radio"]:checked + .radio-control {
+    background-color: #9B26B0; /* Purple background when checked */
+    border-color: #9B26B0; /* Purple border */
+}
+
+#contact .radio-label {
+    margin-left: 30px;
+    font-size: 1rem;
+    color: #222222; /* Dark Gray */
+}
+
+#contact input[type="submit"] {
+    grid-column: span 2;
+    padding: 15px;
+    background-color: #9B26B0; /* Purple background */
+    color: #FFFFFF; /* White text */
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#contact input[type="submit"]:hover {
+    background-color: #7F1E8F; /* Darker purple on hover */
+}
+
+/* Responsive Design for Contact Section */
+@media (max-width: 768px) {
+    #contact form {
+        grid-template-columns: 1fr;
+    }
+
+    #contact fieldset {
+        grid-column: span 1;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #contact input[type="submit"] {
+        grid-column: span 1;
+    }
+}
+
+
+/* Footer */
+footer {
+    background: #222222; /* Dark Gray */
+    color: #FFFFFF; /* White */
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #FFFFFF; /* White */
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries */
+
+/* Tablet and up */
+@media (min-width: 600px) {
+    nav ul {
+        flex-direction: row;
+    }
+
+    #img-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #plan div,
+    #testimonials div,
+    #about div {
+        flex-direction: row;
+    }
+}
+
+/* Desktop and up */
+@media (min-width: 1024px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 50px;
+    }
+
+    header h1 {
+        font-size: 2.4rem;
+    }
+
+    nav ul {
+        justify-content: flex-end;
+    }
+
+    main {
+        padding: 20px 50px;
+    }
+
+    #img-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #plan div,
+    #testimonials div,
+    #about div {
+        gap: 40px;
+    }
+
+    footer {
+        padding: 20px 50px;
+    }
+}
